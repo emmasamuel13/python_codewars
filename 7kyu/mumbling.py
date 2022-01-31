@@ -6,9 +6,8 @@ def accum(s):
     s.lower()
     letters = list(s)
     mumble = []
-    for letter in letters:
-        times = letters.index(letter)
-        times = times + 1
+    for index, letter in enumerate(letters, start = 1):
+        times = index
         mumbled = letter * times
         mumble.append(mumbled.capitalize())
     return "-".join(mumble)
